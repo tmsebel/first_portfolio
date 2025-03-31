@@ -1,0 +1,194 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2D3748, #4A5568); /* Dark slate gray gradient */
+    color: #E5E7EB; /* Light gray text for contrast */
+    line-height: 1.6;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Code Snippet Background Effect */
+body::before {
+    content: "function code() { console.log('Hello World'); } const x = 42; // TODO: Fix bug let data = [1, 2, 3];";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.05); /* Very faint white */
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 20px,
+        rgba(255, 255, 255, 0.02) 20px,
+        rgba(255, 255, 255, 0.02) 22px
+    ); /* Subtle horizontal lines like a code editor */
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(-10deg); /* Slight tilt for a dynamic effect */
+}
+
+/* Header */
+header {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: left;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #60A5FA;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Sections */
+section {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Headings with Icons */
+h2 {
+    color: #60A5FA; /* Lighter blue for headings */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 .icon {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* About */
+.about p {
+    font-size: 1.1rem;
+}
+
+/* Skills */
+.skills ul {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.skills li {
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.skills li:hover {
+    color: #60A5FA;
+}
+
+/* Projects */
+.projects .project {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #E5E7EB;
+}
+
+.project p {
+    margin: 0.5rem 0;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #1E3A8A, #3B82F6);
+    color: white;
+    padding: 2rem 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #60A5FA;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
